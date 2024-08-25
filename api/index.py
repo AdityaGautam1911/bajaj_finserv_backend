@@ -1,22 +1,10 @@
-# import os
-
-# from flask import Flask
-
-# app = Flask(_name_)
-
-# @app.route("/")
-# def hello_world():
-#   """Example Hello World route."""
-#   name = os.environ.get("NAME", "World")
-#   return f"Hello {name}!"
-
 # if _name_ == "_main_":
 #   app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 3000)))
 
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 
 def extract_data(input_data):
     numbers = []
